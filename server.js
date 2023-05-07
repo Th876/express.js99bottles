@@ -2,6 +2,7 @@
 const express = require('express');
 const port = 3000;
 
+
 // Instantiate express
 const app = express();
 
@@ -30,7 +31,7 @@ app.get('/:number_of_bottles', (req, res) => {
         const removeBottleLink =  `<a href="${minusBottle}">take one down, pass it around</a>`;
         // Send back to the client(the browser) 
         res.send(`
-            <h1>${numOfBottles} bottles of beer left on the wall</h1>
+            <h1>${numOfBottles} bottles of beer on the wall</h1>
             <button>${removeBottleLink}</button>
          `)
         }
